@@ -1,0 +1,122 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+}
+a { color: #ffffff; }
+.content {
+    width: 960px;
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.header { padding-top: 26px; margin-bottom: 42px; }
+.header img {
+    display: block;
+    width: 318px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.post-title { margin: 0 0 12px; }
+.post-title a { color: #ffffff; }
+.one-post { margin-bottom: 42px; }
+.article-author { width: 50%; float: left; font-weight: bold; }
+.article-created-date { text-align: right; font-style: italic; }
+.article-text { line-height: 1.5; margin-top: 20px; }
+.article .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.article .header img { width: 250px; margin: 0; }
+.article .header a { font-weight: bold; white-space: nowrap; }
+.article h1 { margin-bottom: 12px; }
+@media (max-width: 480px) { .article .header img { width: 180px; } }
+
+.create-post .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.create-post .header img { width: 250px; margin: 0; }
+.create-post .header a { font-weight: bold; white-space: nowrap; }
+.create-post form { max-width: 700px; }
+.create-post label { display: block; font-weight: bold; margin: 18px 0 8px; }
+.create-post input, .create-post textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    border: 1px solid #0c7f6b;
+    border-radius: 4px;
+}
+.create-post button {
+    padding: 10px 24px;
+    font: inherit;
+    font-weight: bold;
+    color: #ffffff;
+    background: #0c7563;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-error { color: #71231c; background: #fff1ed; padding: 10px; }
+
+.archive-header { position: relative; }
+.archive-header .user-nav { position: absolute; right: 0; top: 39px; }
+.user-nav, .header-links { display: flex; align-items: center; gap: 16px; }
+.user-nav form { margin: 0; }
+.user-nav a, .header-links a, .account-header a { font-weight: bold; }
+.user-nav button {
+    color: white; background: none; border: 0;
+    font: inherit; font-weight: bold; text-decoration: underline; cursor: pointer;
+}
+.account-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.account-header img { width: 250px; margin: 0; }
+.account form { max-width: 520px; }
+.account label { display: block; font-weight: bold; margin: 18px 0 8px; }
+.account input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    font: inherit;
+    border: 1px solid #0c7f6b;
+    border-radius: 4px;
+}
+.account button {
+    margin-top: 18px;
+    padding: 10px 24px;
+    font: inherit;
+    font-weight: bold;
+    color: white;
+    background: #0c7563;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-message { color: #145439; background: #e6fff1; padding: 10px; max-width: 500px; }
+@media (max-width: 740px) {
+    .archive-header .user-nav { position: static; justify-content: center; margin-top: 16px; }
+    .article .header, .account-header { flex-wrap: wrap; }
+}
+
+.fold-button, .student-controls button {
+    color: #ffffff; background: #0c7563; border: 0;
+    padding: 8px 14px; border-radius: 4px; font: inherit; cursor: pointer;
+}
+.fold-button { margin-bottom: 12px; }
+.one-post.folded .article-author,
+.one-post.folded .article-created-date,
+.one-post.folded .article-text { display: none; }
+.students { margin: 50px 0; }
+.student-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; }
+.student-controls form { display: flex; flex-wrap: wrap; align-items: end; gap: 8px; }
+.student-controls label { display: block; width: 100%; font-weight: bold; }
+.student-controls input { padding: 8px; border: 1px solid #0c7f6b; border-radius: 4px; font: inherit; }
+.table-wrapper { overflow-x: auto; }
+.students-table { width: 100%; border-collapse: collapse; }
+.students-table th, .students-table td { border: 1px solid white; padding: 8px; text-align: left; }

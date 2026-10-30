@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вход</title>
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body class="account">
+    <header class="header content account-header">
+        <img src="{% static 'img/logo.svg' %}" alt="Аренда торговых площадей">
+        <a href="{% url 'archive' %}">Все записи</a>
+    </header>
+    <main class="content">
+        <h1>Вход</h1>
+        {% for message in messages %}
+        <p class="form-message">{{ message }}</p>
+        {% endfor %}
+        <form method="post">
+            {% csrf_token %}
+            <label for="username">Имя пользователя</label>
+            <input id="username" name="username" value="{{ form.username }}">
+            <label for="password">Пароль</label>
+            <input id="password" name="password" type="password">
+            {% if form.error %}
+            <p class="form-error" role="alert">{{ form.error }}</p>
+            {% endif %}
+            <button type="submit">Войти</button>
+        </form>
+    </main>
+</body>
+</html>

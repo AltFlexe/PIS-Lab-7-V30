@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Архив статей</title>
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body class="archive">
+    <header class="header content archive-header">
+        <img src="{% static 'img/logo.svg' %}" alt="Аренда торговых площадей">
+        <nav class="user-nav" aria-label="Аккаунт">
+            <a href="{% url 'register' %}">Регистрация</a>
+            {% if user.is_authenticated %}
+            <span>{{ user.username }}</span>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}<button type="submit">Выйти</button>
+            </form>
+            {% else %}
+            <a href="{% url 'login' %}">Войти</a>
+            {% endif %}
+        </nav>
+    </header>
+    <main class="content">
+        {% if user.is_authenticated %}
+        <p><a href="{% url 'create_post' %}">Написать статью</a></p>
+        {% endif %}
+        {% for post in posts %}
+        <article class="one-post">
+            <h2 class="post-title">
+                <a href="{% url 'get_article' post.id %}">{{ post.title }}</a>
+            </h2>
+            <button class="fold-button" type="button" aria-expanded="true">Свернуть</button>
+            <div class="article-info">
+                <div class="article-author">{{ post.author.username }}</div>
+                <div class="article-created-date">{{ post.created_date }}</div>
+            </div>
+            <p class="article-text">{{ post.get_excerpt }}</p>
+        </article>
+        {% empty %}
+        <p>Статей пока нет.</p>
+        {% endfor %}
+        <section class="students" aria-labelledby="students-heading">
+            <h2 id="students-heading">Список студентов</h2>
+            <div class="student-controls">
+                <form id="group-form">
+                    <label for="group-input">Группа</label>
+                    <input id="group-input" type="text" placeholder="Например, БСТ0001">
+                    <button type="submit">Найти по группе</button>
+                </form>
+                <form id="average-form">
+                    <label for="average-input">Средний балл выше</label>
+                    <input id="average-input" type="number" step="any" placeholder="Например, 4">
+                    <button type="submit">Найти по баллу</button>
+                </form>
+                <button type="button" id="show-all">Показать всех</button>
+            </div>
+            <p id="student-status" role="status"></p>
+            <div class="table-wrapper">
+                <table class="students-table">
+                    <thead><tr><th>Имя</th><th>Фамилия</th><th>Группа</th><th>Оценки</th><th>Средний балл</th></tr></thead>
+                    <tbody id="students-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="{% static 'js/helloworld.js' %}"></script>
+    <script src="{% static 'js/fold-post.js' %}"></script>
+</body>
+</html>
