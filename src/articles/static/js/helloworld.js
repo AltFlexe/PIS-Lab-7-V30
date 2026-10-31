@@ -1,5 +1,5 @@
 const groupmates = [
-    {name: 'Алексей', surname: 'Морозов', group: 'БСТ0001', marks: [4, 3, 5]},
+    {name: 'Денис', surname: 'Уваров', group: 'БСТ2351', marks: [4, 3, 5]},
     {name: 'Иван', surname: 'Петров', group: 'БСТ0001', marks: [4, 4, 4]},
     {name: 'Кирилл', surname: 'Смирнов', group: 'БСТ0001', marks: [5, 5, 5]},
     {name: 'Анна', surname: 'Соколова', group: 'БСТ0001', marks: [5, 4, 5]},
