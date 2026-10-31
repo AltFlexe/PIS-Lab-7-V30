@@ -1,10 +1,10 @@
 body {
-    background: #1abc9c;
+    background: #f3f6fa;
     font-family: Tahoma, Arial, sans-serif;
-    color: #ffffff;
+    color: #243746;
     margin: 0;
 }
-a { color: #ffffff; }
+a { color: #245b80; }
 .content {
     width: 960px;
     max-width: calc(100% - 40px);
@@ -20,7 +20,7 @@ a { color: #ffffff; }
     margin-right: auto;
 }
 .post-title { margin: 0 0 12px; }
-.post-title a { color: #ffffff; }
+.post-title a { color: #245b80; }
 .one-post { margin-bottom: 42px; }
 .article-author { width: 50%; float: left; font-weight: bold; }
 .article-created-date { text-align: right; font-style: italic; }
@@ -51,7 +51,7 @@ a { color: #ffffff; }
     width: 100%;
     padding: 12px;
     font: inherit;
-    border: 1px solid #0c7f6b;
+    border: 1px solid #829caa;
     border-radius: 4px;
 }
 .create-post button {
@@ -59,7 +59,7 @@ a { color: #ffffff; }
     font: inherit;
     font-weight: bold;
     color: #ffffff;
-    background: #0c7563;
+    background: #245f79;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
@@ -72,7 +72,7 @@ a { color: #ffffff; }
 .user-nav form { margin: 0; }
 .user-nav a, .header-links a, .account-header a { font-weight: bold; }
 .user-nav button {
-    color: white; background: none; border: 0;
+    color: #245b80; background: none; border: 0;
     font: inherit; font-weight: bold; text-decoration: underline; cursor: pointer;
 }
 .account-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
@@ -84,7 +84,7 @@ a { color: #ffffff; }
     width: 100%;
     padding: 12px;
     font: inherit;
-    border: 1px solid #0c7f6b;
+    border: 1px solid #829caa;
     border-radius: 4px;
 }
 .account button {
@@ -93,7 +93,7 @@ a { color: #ffffff; }
     font: inherit;
     font-weight: bold;
     color: white;
-    background: #0c7563;
+    background: #245f79;
     border: 0;
     border-radius: 4px;
     cursor: pointer;
@@ -105,7 +105,7 @@ a { color: #ffffff; }
 }
 
 .fold-button, .student-controls button {
-    color: #ffffff; background: #0c7563; border: 0;
+    color: #ffffff; background: #245f79; border: 0;
     padding: 8px 14px; border-radius: 4px; font: inherit; cursor: pointer;
 }
 .fold-button { margin-bottom: 12px; }
@@ -116,7 +116,7 @@ a { color: #ffffff; }
 .student-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 16px; }
 .student-controls form { display: flex; flex-wrap: wrap; align-items: end; gap: 8px; }
 .student-controls label { display: block; width: 100%; font-weight: bold; }
-.student-controls input { padding: 8px; border: 1px solid #0c7f6b; border-radius: 4px; font: inherit; }
+.student-controls input { padding: 8px; border: 1px solid #829caa; border-radius: 4px; font: inherit; }
 .table-wrapper { overflow-x: auto; }
 .students-table { width: 100%; border-collapse: collapse; }
-.students-table th, .students-table td { border: 1px solid white; padding: 8px; text-align: left; }
+.students-table th, .students-table td { border: 1px solid #9caebc; padding: 8px; text-align: left; }
